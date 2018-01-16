@@ -12,7 +12,6 @@
         <!--Tip Me-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tipme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -68,7 +67,7 @@
                                     <segment title="Bad (15%)"/>
                                     <segment title="18%"/>
                                     <segment title="20%"/>
-                                    <segment title="Ballin' (25%)"/>
+                                    <segment title="Great (25%)"/>
                                 </segments>
                                 <connections>
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="RgU-JS-P3d"/>
@@ -88,7 +87,13 @@
                             <outletCollection property="gestureRecognizers" destination="ec2-CJ-M8O" appends="YES" id="lv4-MF-BfX"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Me" id="zOY-5Q-6iW"/>
+                    <navigationItem key="navigationItem" title="Tip Me" id="zOY-5Q-6iW">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="dXE-HT-1gr">
+                            <connections>
+                                <segue destination="gbt-hP-MDj" kind="push" id="RMI-zE-23E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="N9D-WV-0bz" id="rDQ-p7-FLw"/>
                         <outlet property="tipController" destination="415-bc-Gur" id="PmL-xx-HTX"/>
@@ -96,6 +101,7 @@
                         <outlet property="totalLabel" destination="ZC4-6m-3Ce" id="HnA-nN-wq0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="ec2-CJ-M8O">
                     <connections>
                         <action selector="onTap:" destination="BYZ-38-t0r" id="Oq7-D3-0Ii"/>
@@ -103,6 +109,21 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="414.5" y="-179.5"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="9eK-r4-nL7">
+            <objects>
+                <viewController id="gbt-hP-MDj" customClass="SettingsViewController" customModule="tipme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kfe-yY-EgS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nDi-K8-Z6Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0g-C0-iXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="-180"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mNN-G4-5MS">

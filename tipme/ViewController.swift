@@ -16,6 +16,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Sets the title in the Navigation Bar
+        self.title = "Tip Me"
+        //
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
